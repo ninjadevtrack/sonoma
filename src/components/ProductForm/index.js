@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Formik, Field, Form } from "formik";
-import { Button } from "components/bs";
+import { Button } from "components/common";
 import { InputField } from "components/formik";
 import validationSchema from "./schema";
 

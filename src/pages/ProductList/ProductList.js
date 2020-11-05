@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Row, Col } from "components/bs";
+import { Row, Col } from "components/common";
 import { UserItem } from "components/custom";
 import actions from "redux/actions";
 
