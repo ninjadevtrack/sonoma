@@ -11,10 +11,10 @@ const Footer = () => (
                     <h5>Information</h5>
                     <ul className="list-unstyled">
                         <li>
-                            <a href="#">About Us</a>
+                            <a href="/">About Us</a>
                         </li>
                         <li>
-                            <a href="#">Privacy Policy</a>
+                            <a href="/">Privacy Policy</a>
                         </li>
                     </ul>
                 </div>
@@ -23,13 +23,13 @@ const Footer = () => (
                     <h5>Customer Service</h5>
                     <ul className="list-unstyled">
                         <li>
-                            <a href="#">Contact Us</a>
+                            <a href="/">Contact Us</a>
                         </li>
                         <li>
-                            <a href="#">Returns</a>
+                            <a href="/">Returns</a>
                         </li>
                         <li>
-                            <a href="#">Site Map</a>
+                            <a href="/">Site Map</a>
                         </li>
                     </ul>
                 </div>
@@ -37,16 +37,16 @@ const Footer = () => (
                     <h5>Extras</h5>
                     <ul className="list-unstyled">
                         <li>
-                            <a href="#">Brands</a>
+                            <a href="/">Brands</a>
                         </li>
                         <li>
-                            <a href="#">Gift Certificates</a>
+                            <a href="/">Gift Certificates</a>
                         </li>
                         <li>
-                            <a href="#">Affiliates</a>
+                            <a href="/">Affiliates</a>
                         </li>
                         <li>
-                            <a href="#">Specials</a>
+                            <a href="/">Specials</a>
                         </li>
                     </ul>
                 </div>
@@ -54,16 +54,16 @@ const Footer = () => (
                     <h5>My Account</h5>
                     <ul className="list-unstyled">
                         <li>
-                            <a href="#">My Account</a>
+                            <a href="/">My Account</a>
                         </li>
                         <li>
-                            <a href="#">Order History</a>
+                            <a href="/">Order History</a>
                         </li>
                         <li>
-                            <a href="#">Wish list</a>
+                            <a href="/">Wish list</a>
                         </li>
                         <li>
-                            <a href="#">Newsletter</a>
+                            <a href="/">Newsletter</a>
                         </li>
                     </ul>
                 </div>
@@ -75,44 +75,44 @@ const Footer = () => (
                 <div className="pull-left">
                     <ul className="toggle-block">
                         <li>
-                            <a href="#" title="Facebook" className="facebook icon">
+                            <a href="/" title="Facebook" className="facebook icon">
                                 <i className="fa fa-facebook"></i>
                             </a>
-                            <a href="#" title="Twitter" className="twitter icon">
+                            <a href="/" title="Twitter" className="twitter icon">
                                 <i className="fa fa-twitter"></i>
                             </a>
 
-                            <a href="#" title="Linkedin" className="linkedin icon">
+                            <a href="/" title="Linkedin" className="linkedin icon">
                                 <i className="fa fa-linkedin"></i>
                             </a>
-                            <a href="#" title="RSS" className="rss icon">
+                            <a href="/" title="RSS" className="rss icon">
                                 <i className="fa fa-rss"></i>
                             </a>
-                            <a href="#" title="Youtube" className="youtube icon">
+                            <a href="/" title="Youtube" className="youtube icon">
                                 <i className="fa fa-youtube"></i>
                             </a>
 
-                            <a href="#" title="Pinterest" className="pinterest icon">
+                            <a href="/" title="Pinterest" className="pinterest icon">
                                 <i className="fa fa-pinterest"></i>
                             </a>
                             <a
-                                href="#"
+                                href="/"
                                 title="Google Plus "
                                 className="google-plus icon"
                             >
                                 <i className="fa fa-google-plus"></i>
                             </a>
-                            <a href="#" title="Skype" className="skype icon">
+                            <a href="/" title="Skype" className="skype icon">
                                 <i className="fa fa-skype"></i>
                             </a>
-                            <a href="#" title="Instagram" className="instagram icon">
+                            <a href="/" title="Instagram" className="instagram icon">
                                 <i className="fa fa-instagram"></i>
                             </a>
                         </li>
                     </ul>
                 </div>
                 <div className="pull-right">
-                    <div id="powered">&copy; 2018</div>
+                    <div id="powered">&copy; 2020</div>
                 </div>
             </div>
         </div>

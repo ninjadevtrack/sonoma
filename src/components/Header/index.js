@@ -29,17 +29,17 @@ const Header = () => (
                     <div className="header-links">
                         <ul className="static_links">
                             <li className="head-links">
-                                <a href="#">Special</a>
+                                <a href="#">West Elm Contract</a>
                             </li>
                             <li className="head-links">
-                                <a href="#">Affiliate</a>
+                                <a href="#">Pottery Barn</a>
                             </li>
                             <li className="head-links">
                                 {' '}
-                                <a href="#">Blog</a>
+                                <a href="#">Apartment</a>
                             </li>
                             <li className="head-links">
-                                <a href="#">Contact</a>
+                                <a href="#">Kids</a>
                             </li>
                         </ul>
                     </div>
@@ -54,7 +54,7 @@ const Header = () => (
                                 <i className="fa fa-phone"></i>
                             </a>{' '}
                             <span className="hidden-xs hidden-sm hidden-md">
-                                0807348785784
+                                +1 7159971298
                             </span>
                         </li>
                         <li>

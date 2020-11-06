@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import HOC from 'components/HOC';
 
-import ProductItem from './ProductItem';
-import ProductOverview from './ProductOverview';
+import ProductItem from '../ProductItem';
+import ProductOverview from '../ProductOverview';
 
 const ProductList = (props) => {
     const currentProduct = !!props.products ? props.products[0] : {};
@@ -41,44 +41,11 @@ const ProductList = (props) => {
                                 ></button>
                             </div>
                         </div>
-                        <div className="compare-total">
-                            <a href="/" id="compare-total">
-                                {' '}
-                                Product Compare (0)
-                            </a>
-                        </div>
                         <div className="pagination-right">
-                            <div className="sort-by-wrapper">
-                                <div className="col-md-6 text-right sort-by">
-                                    <label
-                                        className="control-label"
-                                        htmlFor="input-sort"
-                                    >
-                                        <strong>Sort By</strong>
-                                    </label>
-                                </div>
-                                <div className="col-md-6 text-right sort">
-                                    <select id="input-sort" className="form-control">
-                                        <option value="menu_order">
-                                            Default sorting
-                                        </option>
-                                        <option value="popularity">
-                                            Sort by popularity
-                                        </option>
-                                        <option value="rating">
-                                            Sort by average rating
-                                        </option>
-                                        <option value="date">Sort by newness</option>
-                                        <option value="price">
-                                            Sort by price: low to high
-                                        </option>
-                                        <option value="price-desc">
-                                            Sort by price: high to low
-                                        </option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div className="show-wrapper">
+                            <div
+                                className="show-wrapper"
+                                style={{ display: 'flex', alignItems: 'center' }}
+                            >
                                 <div className="col-md-4 text-right show">
                                     <label
                                         className="control-label"

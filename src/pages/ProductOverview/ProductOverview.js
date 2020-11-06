@@ -1,4 +1,4 @@
-import React, { useState, CSSProperties } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 import { LeftCircleOutlined, RightCircleOutlined } from '@ant-design/icons';
@@ -99,22 +99,21 @@ const ProductOverview = (props) => {
                                 ''
                             )}
                         </h3>
-                        <h4 style={{ color: 'red' }}>
+                        <h4>
                             Up to 30% off + free shipping on orders $79+ with code
                             SAVENOW
                         </h4>
-                        <h5>
-                            Please select color<span>Belgian Chambray</span>
-                        </h5>
+                        <h5>Please select color</h5>
                         <div
                             className="image"
                             style={{ width: '60px', height: '60px' }}
                         >
-                            <div className="product-block-inner" width="58">
+                            <div className="product-block-inner" width="60">
                                 <img
                                     src={props.thumbnail.href}
                                     title={props.name}
                                     alt={props.name}
+                                    style={{ width: '55px', height: '50px' }}
                                     className="img-responsive reg-image"
                                 />
                             </div>
@@ -122,13 +121,6 @@ const ProductOverview = (props) => {
                         <div className="subset-qty">
                             <label className="qty-legacy-ie">quantity</label>
                             <div className="quantity-input__container">
-                                <div
-                                    className="decrease-count"
-                                    data-for-sku="skuQuantity_primaryGroup_0_0"
-                                    aria-hidden="true"
-                                >
-                                    -
-                                </div>
                                 <input
                                     id="skuQuantity_primaryGroup_0_0"
                                     className="quantity-input qty resetDataAddToCart"
@@ -141,23 +133,15 @@ const ProductOverview = (props) => {
                                     placeholder="0"
                                     data-addtocart='{"sku":"3203763","groupId":"doctors-without-borders-face-coverings-set-of-2-d9946","catalog":"71","persistentProductId":"","intlIneligibility":false}'
                                 />
-                                <div
-                                    className="increase-count"
-                                    data-for-sku="skuQuantity_primaryGroup_0_0"
-                                    aria-hidden="true"
-                                >
-                                    +
-                                </div>
                             </div>
-                            <p className="pip-sku">SKU: 3203763</p>
                         </div>
-                    </div>
-                </div>
-                <div className="product-block">
-                    <div className="button-group">
-                        <button type="button" className="addtocart">
-                            Add To Cart
-                        </button>
+                        <div className="product-block">
+                            <div className="button-group">
+                                <button type="button" className="addtocart">
+                                    Add To Cart
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

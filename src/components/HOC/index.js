@@ -1,5 +1,5 @@
 import React from 'react';
-import ProductList from './ProductList.json';
+import ProductList from 'constants/ProductList.json';
 
 const HOC = (Component) =>
     class HigherOrderComponent extends React.Component {
