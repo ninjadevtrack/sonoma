@@ -17,24 +17,6 @@ const ProductList = (props) => {
                 <li>Product</li>
             </ul>
             <div className="clearfix"></div>
-            <div className="search_bar">
-                <div id="search" className="input-group" style={{ width: '50%' }}>
-                    <input
-                        type="text"
-                        name="search"
-                        placeholder="Search Products..."
-                        className="form-control input-lg"
-                    />
-                    <span className="input-group-btn">
-                        <button
-                            type="button"
-                            className="btn btn-default btn-lg search-button"
-                        >
-                            Search
-                        </button>
-                    </span>
-                </div>
-            </div>
             <div className="row">
                 <ProductOverview {...currentProduct} />
             </div>
