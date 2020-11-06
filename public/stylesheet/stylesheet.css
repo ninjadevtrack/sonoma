@@ -2697,6 +2697,9 @@ h2.price {
 	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
 	filter: alpha(opacity=50);
 }
+.product-layout:hover {
+	cursor: pointer;
+}
 .product-layout.product-grid .product-details{padding:10px;text-align: center;position: relative;}
 .product-layout.product-grid:hover .product-block-hover{bottom: 10px;opacity: 1;
 	-khtml-opacity:1;

@@ -2,14 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const ProductItem = (props) => (
-    <div className="product-layout product-grid col-md-4 col-xs-12">
+    <div
+        className="product-layout product-grid col-md-4 col-xs-12"
+        onClick={props.clicked}
+    >
         <div className="product-block product-thumb">
             <div className="product-block-inner">
                 <div className="image product-image">
-                    <div className="image product-image_title">
-                        <a href="/">{props.name}</a>
-                    </div>
-                    <a href="/">
+                    <div className="image product-image_title">{props.name}</div>
+                    <div>
                         <img
                             src={props.thumbnail.href}
                             title={props.name}
@@ -22,7 +23,7 @@ const ProductItem = (props) => (
                             title="product name"
                             alt="product name"
                         />
-                    </a>
+                    </div>
                     <div className="price product_price">
                         {props.price ? (
                             <div>

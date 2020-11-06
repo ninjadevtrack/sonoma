@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import HOC from 'components/HOC';
 
@@ -6,7 +6,14 @@ import ProductItem from '../ProductItem';
 import ProductOverview from '../ProductOverview';
 
 const ProductList = (props) => {
-    const currentProduct = !!props.products ? props.products[0] : {};
+    const [curentProductId, setProduct] = useState(0);
+    let currentProduct = !!props.products ? props.products[curentProductId] : {};
+
+    const onSelectItem = (index) => {
+        setProduct(index);
+        currentProduct = !!props.products ? props.products[curentProductId] : {};
+    };
+
     return (
         <div id="product-category" className="container">
             <ul className="breadcrumb">
@@ -69,7 +76,11 @@ const ProductList = (props) => {
                     </div>
                     <div className="row">
                         {props.products.map((product, i) => (
-                            <ProductItem key={i} {...product} />
+                            <ProductItem
+                                key={i}
+                                {...product}
+                                clicked={() => onSelectItem(i)}
+                            />
                         ))}
                     </div>
                     <div className="pagination-wrapper">
