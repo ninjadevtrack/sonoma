@@ -2,78 +2,44 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import HOC from 'components/HOC';
 
-import SingleProductComponent from './SingleProduct';
+import ProductItem from './ProductItem';
+import ProductOverview from './ProductOverview';
 
 const ProductList = (props) => {
-    const productLists = props.products.map((product, i) => (
-        <SingleProductComponent key={i} {...product} />
-    ));
-
+    const currentProduct = !!props.products ? props.products[0] : {};
     return (
         <div id="product-category" className="container">
             <ul className="breadcrumb">
                 <li>
-                    <a href="#">Home</a>
+                    <a href="/home">Home</a>
                 </li>
                 <span>/</span>
                 <li>Product</li>
             </ul>
             <div className="clearfix"></div>
-            <div className="container">
-                <div className="header-search">
-                    <div id="search" className="input-group">
-                        <input
-                            type="text"
-                            name="search"
-                            value=""
-                            placeholder="Search Products..."
-                            className="form-control input-lg"
-                        />
-                        <span className="input-group-btn">
-                            <button
-                                type="button"
-                                className="btn btn-default btn-lg search-button"
-                            >
-                                Search
-                            </button>
-                        </span>
-                    </div>
+            <div className="search_bar">
+                <div id="search" className="input-group" style={{ width: '50%' }}>
+                    <input
+                        type="text"
+                        name="search"
+                        placeholder="Search Products..."
+                        className="form-control input-lg"
+                    />
+                    <span className="input-group-btn">
+                        <button
+                            type="button"
+                            className="btn btn-default btn-lg search-button"
+                        >
+                            Search
+                        </button>
+                    </span>
                 </div>
             </div>
             <div className="row">
+                <ProductOverview {...currentProduct} />
+            </div>
+            <div className="row">
                 <div id="content" className="col-md-12">
-                    <h2 className="page-title">Products</h2>
-                    <div className="row category_thumb">
-                        <div className="col-sm-2 category_img">
-                            <img
-                                src="/image/product-small-b.jpg"
-                                alt="{{ heading_title }}"
-                                title="{{ heading_title }}"
-                                className="img-responsive"
-                            />
-                        </div>
-                        <div className="col-sm-10 category_description">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolore
-                            magna aliqua. Ut enim ad minim veniam, quis nostrud
-                            exercitation ullamco laboris nisi ut aliquip ex ea
-                            commodo consequat
-                        </div>
-                    </div>
-                    <h3 className="refine-search">Refine Search</h3>
-                    <div className="row">
-                        <div className="col-sm-12 category_list">
-                            <ul>
-                                <li>
-                                    <a href="#">PC (0)</a>
-                                </li>
-                                <li>
-                                    <a href="#">Mac (1)</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
                     <div className="category_filter">
                         <div className="col-md-4 btn-list-grid">
                             <div className="btn-group">
@@ -94,14 +60,14 @@ const ProductList = (props) => {
                             </div>
                         </div>
                         <div className="compare-total">
-                            <a href="#" id="compare-total">
+                            <a href="/" id="compare-total">
                                 {' '}
                                 Product Compare (0)
                             </a>
                         </div>
                         <div className="pagination-right">
                             <div className="sort-by-wrapper">
-                                <div className="col-md-2 text-right sort-by">
+                                <div className="col-md-6 text-right sort-by">
                                     <label
                                         className="control-label"
                                         htmlFor="input-sort"
@@ -109,7 +75,7 @@ const ProductList = (props) => {
                                         <strong>Sort By</strong>
                                     </label>
                                 </div>
-                                <div className="col-md-3 text-right sort">
+                                <div className="col-md-6 text-right sort">
                                     <select id="input-sort" className="form-control">
                                         <option value="menu_order">
                                             Default sorting
@@ -131,7 +97,7 @@ const ProductList = (props) => {
                                 </div>
                             </div>
                             <div className="show-wrapper">
-                                <div className="col-md-1 text-right show">
+                                <div className="col-md-4 text-right show">
                                     <label
                                         className="control-label"
                                         htmlFor="input-limit"
@@ -139,7 +105,7 @@ const ProductList = (props) => {
                                         <strong>Show</strong>
                                     </label>
                                 </div>
-                                <div className="col-md-2 text-right limit">
+                                <div className="col-md-6 text-right limit">
                                     <select
                                         id="input-limit"
                                         className="form-control"
@@ -152,8 +118,11 @@ const ProductList = (props) => {
                             </div>
                         </div>
                     </div>
-
-                    <div className="row">{productLists}</div>
+                    <div className="row">
+                        {props.products.map((product, i) => (
+                            <ProductItem key={i} {...product} />
+                        ))}
+                    </div>
                     <div className="pagination-wrapper">
                         <div className="col-sm-6 text-left page-link">
                             Showing 1 to {props.products.length} of{' '}
