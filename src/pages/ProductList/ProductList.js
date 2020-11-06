@@ -1,13 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import { useDispatch, useSelector } from 'react-redux';
-// import { Row, Col } from 'components/common';
-// import { UserItem } from 'components/custom';
 import HOC from 'components/HOC';
-// import actions from "redux/actions";
 
 import SingleProductComponent from './SingleProduct';
-import LatestProducts from './LatestProducts';
 
 const ProductList = (props) => {
     const productLists = props.products.map((product, i) => (
@@ -24,9 +19,29 @@ const ProductList = (props) => {
                 <li>Product</li>
             </ul>
             <div className="clearfix"></div>
+            <div className="container">
+                <div className="header-search">
+                    <div id="search" className="input-group">
+                        <input
+                            type="text"
+                            name="search"
+                            value=""
+                            placeholder="Search Products..."
+                            className="form-control input-lg"
+                        />
+                        <span className="input-group-btn">
+                            <button
+                                type="button"
+                                className="btn btn-default btn-lg search-button"
+                            >
+                                Search
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
             <div className="row">
-                <LatestProducts />
-                <div id="content" className="col-md-9">
+                <div id="content" className="col-md-12">
                     <h2 className="page-title">Products</h2>
                     <div className="row category_thumb">
                         <div className="col-sm-2 category_img">

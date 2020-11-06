@@ -2857,7 +2857,7 @@ h2.price {
 /* box */
 .header-search {
 	float: left;
-	width: 43%;
+	/* width: 43%; */
 }
 #search .form-control.input-lg {
 	box-sizing: border-box;

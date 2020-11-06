@@ -67,21 +67,6 @@ const Footer = () => (
                         </li>
                     </ul>
                 </div>
-                <div className="content_footer_right">
-                    <h5>Contact Us</h5>
-                    <ul className="list-unstyled">
-                        <li>
-                            <div className="address">
-                                <div className="address_content">
-                                    <div className="contact_address">
-                                        60 29th Street San Francisco, CA 94110 United
-                                        States of America
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
             </div>
         </div>
 

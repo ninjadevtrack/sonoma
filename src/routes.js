@@ -5,19 +5,17 @@ import Header from 'components/Header';
 import Footer from 'components/Footer';
 import ProductList from 'pages/ProductList';
 
-import { Container } from 'components/common';
-
 const Routes = () => {
     return (
-        <Container className="py-5">
+        <React.Fragment>
             <Header />
             <Switch>
                 <Route path="/" component={ProductList} exact />
-                <Route path="/user/:ccNumber" component={Detail} exact />
+                <Route path="/details/:detailId" component={Detail} exact />
                 <Route component={() => <Redirect to="/" />} />
             </Switch>
             <Footer />
-        </Container>
+        </React.Fragment>
     );
 };
 
